@@ -51,7 +51,7 @@ img_url = ["https://img-4.linternaute.com/YxAwx7GUfKAu7ms2zNwXkPcZUOI=/1240x/sma
            "https://www.wgu.edu/content/dam/web-sites/blog-newsroom/blog/images/national/2020/march/homeless-resources.jpg"]
 users = ["Chiheb", "Taher", "Valerie"]
 descriptions = [
-    "I had an accident and my car broke down and I don't have enough money to fix it.I'll be grateful if anyone helped me",
+    "I had an accident and my car broke down and I don't have enough money to fix it.I'll be grateful if anyone helped me.Thank you Everyone !",
     "My mother is suffering from rare disease I need money to buy the necessary medicines and to provide the necessary treatments to help her",
     "I need money to provide my payment rent to keep my place. I'll be grateful if anyone can help me and I'm ready for hight rate APR"]
 durations = ["4 Months", "6 Months", "3 Months"]
@@ -65,7 +65,7 @@ for i in range(3):
 
 @app.route('/')
 def index2():
-    return render_template("index.html")
+    return render_template("offers.html", pubs=pubs)
 
 
 @app.route('/login', methods=['GET', 'POST'])
@@ -90,7 +90,7 @@ def apply():
     return render_template('apply.html', form=form)
 
 
-page_list = ["base", "offers", "buttons", "cards", "apply",
+page_list = ["base", "offers", "buttons", "cards", "apply", "profile",
              "charts", "forgot-password", "index", "login", "register", "Sidebar", "tables", "utilities-animation", "utilities-border", "utilities-color", "utilities-other"]
 
 
